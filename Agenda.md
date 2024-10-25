@@ -1,11 +1,12 @@
-## Story
+# Agenda Beratertag 06.12.2024
 
-
-- Einfacher Robot Test mit Should be equal
-- einfaches Python keyword
-- Library Import
-- Browser Library introduction
-- Simple Login Test Case
-  - Keywords für Login
-  - Assertion über URL und Title
-
+- Überblick RobotFramework
+  - Nutzen und Einsatzmöglichkeiten
+- Grundlegende Syntax und Struktur verstehen
+- Verstehen, wie Variablen und Listen funktionieren
+- Benutzerdefinierte Keywords erstellen, um Testfälle zu modularisieren
+- Browser-Testautomatisierung mit der Browser Library erstellen
+- Datadriven Testautomatisierung
+- Grundlagen der Fehlersuche
+  - wie man Testfehler erkennt und behebt
+- Grosse Abschlussübung

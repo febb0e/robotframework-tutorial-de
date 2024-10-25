@@ -2,7 +2,7 @@
     "python.defaultInterpreterPath": "${env:PYTHON}",
     "python.terminal.activateEnvironment": false,
     "gitpod.experimental.portsView.enabled": true,
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
     "explorer.compactFolders": false,
     "git.autorefresh": true,
     "git.autofetchPeriod": 10,

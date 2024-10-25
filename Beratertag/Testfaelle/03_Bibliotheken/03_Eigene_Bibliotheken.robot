@@ -1,10 +1,9 @@
 *** Settings ***
-Library     mylib.py
-
+Library    lib/mylib.py
 
 *** Test Cases ***
-This Test Uses A Custom Python Keyword
+Dieser Test nutzt die eigene Bibliothek
     Check String Length    Hello Robots    12
 
-This Test Will Fail
+Dieser Test schlaegt fehl
     Check String Length    Hello Humans    11
