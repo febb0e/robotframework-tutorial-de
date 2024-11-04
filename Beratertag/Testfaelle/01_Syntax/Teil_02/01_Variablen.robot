@@ -34,8 +34,6 @@ Greife auf Liste zu
     Log To Console    ${DRITTES_ELEMENT}
 
 Gebe vordefinierte Variablen aus
-    Run Keyword If    '${True}'=='${True}'    Log To Console    True
-    Run Keyword If    ${False} == ${True}    Log To Console    False
     Log To Console    ${EMPTY}
     Log To Console    ${None}
     Log To Console    ${EXECDIR}
