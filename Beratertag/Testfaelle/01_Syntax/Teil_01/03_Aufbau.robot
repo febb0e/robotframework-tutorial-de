@@ -15,7 +15,7 @@ Ich bin ein Testfall
     [Documentation]    Hier dokumentiert man einen Testfall
     [Tags]    tag1    tag2
     [Timeout]    10 s
-    [Setup]    Log To Console    Das ist der Anfang
+    [Setup]    Log To Console    \nDas ist der Anfang
     # Benutzerdefiniertes Keyword
     Gruesse von einem Keyword    MyArgument=Foehlicher Nikolaustag!
     [Teardown]    Log To Console    Das ist das Ende

@@ -1,6 +1,6 @@
 *** Test Cases ***
 Ein Testfall der erfolgreich ist
-    Log    message=Hallo Imbus    console=INFO
+    Log    message=\nHallo Imbus    console=INFO
     Log To Console    Hallo Imbus von der Konsole
     Should Be Equal    first=Imbus    second=Imbus
 

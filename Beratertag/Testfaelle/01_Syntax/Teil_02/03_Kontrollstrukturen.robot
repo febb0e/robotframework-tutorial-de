@@ -1,9 +1,9 @@
 *** Test Cases ***
 IF Bedingung
-    IF     ${True}
-        Log To Console    message=Ich werde ausgeführt!
+    IF     '${True}' == '${True}'
+        Log To Console    message=\nIch werde ausgeführt!
     END
-    IF     ${False}
+    IF     '${False}' == '${True}'
         Log To Console    message=Ich werde nicht ausgeführt!
     END
 
@@ -22,7 +22,7 @@ WHILE Schleife
     WHILE    ${value} < ${limit}
         ${value}=    Zaehle hoch    ${value}
     END
-    Log To Console    ${value}
+    Log To Console    \n${value}
 
 *** Keywords ***
 Hole aktuelle Sekunde

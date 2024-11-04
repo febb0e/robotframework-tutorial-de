@@ -13,4 +13,4 @@ Für die Ausführung von Robotframework Dateien gibt es 2 Möglichkeiten
 
 *** Test Cases ***
 Ich moechte ausgefuehrt werden
-    Log To Console    message=Ausfuehrung erfolgreich!
+    Log To Console    message=\nAusfuehrung erfolgreich!

@@ -13,13 +13,13 @@ ${False}
 
 *** Test Cases ***
 Gebe die Variablen aus
-    Log To Console    message=${SKALAR}
+    Log To Console    message=\n${SKALAR}
     Log To Console    message=&{DICTIONARY}
     Log To Console    message=@{LIST}
 
 Greife auf Dictionary zu
     VAR    ${vorname}    ${DICTIONARY['vorname']}
-    Log To Console    ${vorname}
+    Log To Console    \n${vorname}
     # Zugriff auf identische Variable, da nicht case-sensitiv in RFW
     Log To Console    ${VORNAME}
     VAR    ${nachname}    ${DICTIONARY['nachname']}
@@ -27,14 +27,14 @@ Greife auf Dictionary zu
 
 Greife auf Liste zu
     VAR    ${erstes_element}    ${LIST[0]}
-    Log To Console    ${erstes_element}
+    Log To Console    \n${erstes_element}
     VAR    ${drittes_element}    ${LIST[2]}
     Log To Console    ${drittes_element}
     # Zugriff auf identische Variable, da nicht case-sensitiv in RFW
     Log To Console    ${DRITTES_ELEMENT}
 
 Gebe vordefinierte Variablen aus
-    Log To Console    ${EMPTY}
+    Log To Console    \n${EMPTY}
     Log To Console    ${None}
     Log To Console    ${EXECDIR}
     Log To Console    ${CURDIR}

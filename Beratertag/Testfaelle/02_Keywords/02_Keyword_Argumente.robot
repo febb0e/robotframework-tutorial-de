@@ -19,5 +19,5 @@ Verwende VAR syntax
 *** Keywords ***
 Gebe ueberreichte Parameter aus
     [Arguments]    ${parameter_1}    ${parameter_2}=leer
-    Log To Console    message=Parameter 1: ${parameter_1}
+    Log To Console    message=\nParameter 1: ${parameter_1}
     Log To Console    message=Parameter 2: ${parameter_2}

@@ -10,11 +10,11 @@ Library    String
 
 *** Test Cases ***
 Loesung 1
-    Log To Console    Vorname Nachname
+    Log To Console    \nVorname Nachname
 
 Loesung 2
     ${Laenge}=    Get Length    item=Beratertag 06.12.2024
-    Log To Console    message=${Laenge}
+    Log To Console    message=\n${Laenge}
 
 Loesung 3
     Should Be Equal    first=Hallo    second=Hallo
