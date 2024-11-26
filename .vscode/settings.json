@@ -10,8 +10,7 @@
     "robotcode.robot.pythonPath": [
         "./lib",
         "./resources",
-        "./Tutorial/Resources",
-        ".TestObject"
+        "./Beratertag/Resources"
     ],
     "robotcode.robot.args": [
         "--loglevel",
