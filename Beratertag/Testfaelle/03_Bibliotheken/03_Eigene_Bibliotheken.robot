@@ -1,5 +1,5 @@
 *** Settings ***
-Library    lib/mylib.py
+Library    library/mylib.py
 
 *** Test Cases ***
 Dieser Test nutzt die eigene Bibliothek
