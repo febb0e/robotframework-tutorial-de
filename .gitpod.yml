@@ -10,11 +10,11 @@ tasks:
   - name: install Browser
     init: |
       export PYTHON=/home/gitpod/.pyenv/shims/python
-      code -r ./Beratertag/Testfaelle/00_Intro/01_Test_Me.robot 
+      code -r .
       python -m pip install --upgrade pip
       pip install -r requirements.txt
       rfbrowser init
-      code -r .
+      code -r ./Beratertag/Testfaelle/00_Intro/01_Test_Me.robot 
       exit
 
 image: gitpod/workspace-full-vnc
