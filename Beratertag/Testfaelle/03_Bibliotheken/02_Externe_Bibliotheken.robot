@@ -6,11 +6,13 @@ Importieren und Nutzen von Externen Bibliotheken
 https://robotframework.org/?tab=libraries#resources
 
 *** Settings ***
-Library    DataDriver    file={CURDIR}/xlsx/testcases.xlsx
+Library    DataDriver    file=${CURDIR}/xlsx/testcases.xlsx    sheet_name=Multiplikation
 Test Template    Multipliziere zwei Zahlen
 
 *** Test Cases ***
 Pruefe Multiplikation
+...    argument_1
+...    argument_2
 
 *** Keywords ***
 Multipliziere zwei Zahlen

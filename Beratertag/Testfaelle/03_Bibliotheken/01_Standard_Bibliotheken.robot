@@ -29,7 +29,3 @@ Erstelle eine Hello World Datei
     Create File    path=${CURDIR}/txt/helloworld.txt    content=Hello World!
     File Should Not Be Empty    path=${CURDIR}/txt/helloworld.txt
 
-# Macht aktuell Probleme, wegen Runtime in Docker Dev-Container
-Erstelle Screenshot von Desktop
-    Set Screenshot Directory    path=${CURDIR}/screenshots
-    Take Screenshot    name=screenshot_1.png    width=800px
