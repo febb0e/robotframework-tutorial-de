@@ -5,6 +5,6 @@ robotframework-robocop
 robotframework-tidy
 robotframework-faker
 robotframework-debug
-robotframework-datadriver
+robotframework-datadriver[XLS]
 robotframework-stacktrace
 robotframework-crypto
