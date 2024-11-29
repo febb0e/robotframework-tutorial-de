@@ -1,5 +1,0 @@
-*** Settings ***
-
-*** Test Cases ***
-
-*** Keywords ***
