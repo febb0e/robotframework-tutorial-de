@@ -1,15 +1,37 @@
+*** Comments ***
+Variablen in Robotframework dienen der Speicherung von Werten.
+Es gibt verschiedene Typen von Variablen (vereinfacht):
+    1. Skalar:                   Platz für bis zu einem Wert
+    2. Dictionary:               Schlüssel-Wert Paare (key-value pairs)
+    3. List:                     beliebige Anzahl von Werten, die über ihren Index (0 - n) identifiziert werden
+    4. Vordefinierte Variablen:  Durch Robotframework festgelegte Variablen mit eindeutigen Werten
+
+Robotframework ist case-insensitive beim Zugriff auf Variablen.
+
+Variablen können verschiedene Arten von Werten beinhalten (vereinfacht):
+    1. Zahlen
+    2. Buchstaben / Worte
+    3. Steuerzeichen
+
+VAR-Syntax in Robotframework dient der Vereinheitlichung bei der Deklaration von Variablen in Testcases und Keywords
+    VAR    ${VARIABLE}=    zugewiesener Wert
+
+3-Punkt Notation in Robotframework für Zeilenumbrüche in Dokumentation, Variables usw.
+
 *** Variables ***
-${SKALAR}=       Skalarvariablen sind ein einzelnes Objekt
-&{DICTIONARY}        vorname=Mein Vorname    nachname=Mein Nachname
+${SKALAR}=           Skalarvariablen sind ein einzelnes Objekt
+&{DICTIONARY}
+...    vorname=Mein Vorname
+...    nachname=Mein Nachname
 @{LIST}=
 ...        Apfel
 ...        Banane
 ...        Heidelbeere
 ...        Orange
 # Vordefinierte RFW-Variablen
-${EMPTY}
-${True}
-${False}
+# ${EMPTY}
+# ${True}
+# ${False}
 
 *** Test Cases ***
 Gebe die Variablen aus

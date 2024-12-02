@@ -1,8 +1,10 @@
 *** Comments ***
 Übungsaufgabe zu 'Keywords in Robotframework'
 
-1. Extrahiere min. 3 Keywords aus dem vorhandenen Testfall
+0. Führe den Testfall aus zur Validierung
+1. Extrahiere die Keywords aus den Testfällen
 2. Erstelle die Keywords in der Keyword-Section
+    - Übergebe Arguments an die Keywords
 3. Sorge dafür, dass der Testfall wie vorab funktioniert
 
 *** Variables ***

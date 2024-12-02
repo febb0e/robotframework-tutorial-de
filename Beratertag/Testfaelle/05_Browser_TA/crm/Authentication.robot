@@ -35,12 +35,12 @@ Login Mit Gültigen Zugangsdaten
     # Remember-Me-Checkbox klicken
     Click    ${REMEMBER_ME_CHECKBOX}
 
-    # Login-Button klicken
+    # Submit-Button klicken
     Click    ${SUBMIT_BUTTON}
     Sleep    5s
 
     # Validierung des Login-Erfolgs
-    Get Element States         contains    visible
+    Get Element States    ${H2_ELEMENT}     contains    visible
 
 Login Mit Leeren Feldern
     [Documentation]    Überprüft, ob ein Benutzer sich mit leeren Feldern nicht anmelden kann.
@@ -111,6 +111,6 @@ Logout-Funktion
     [Documentation]    Öffnet den Browser und ruft die Login-Seite auf.
     New Browser    chromium    headless=False     # Browser öffnen
     Set Browser Timeout    10s                    # Timeout setzen
-    New Context                                   # Neuer Kontext
+    New Context      viewport=None                # Neuer Kontext
     New Page    ${URL}                            # Neue Seite mit der gegebenen URL öffnen
 

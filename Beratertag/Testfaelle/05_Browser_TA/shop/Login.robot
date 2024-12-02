@@ -55,8 +55,8 @@ Prüfe die Sichtbarkeit und den Text der Fehlermeldungen
     Click        ${LOGIN_BUTTON}
 
     # Überprüfung: Fehlermeldung sichtbar und Text korrekt
-    Wait For Elements State    css=${ERROR_MESSAGE}     visible
-    ${error_message}    Get Text    css=${ERROR_MESSAGE}
+    Wait For Elements State    ${ERROR_MESSAGE}     visible
+    ${error_message}    Get Text    ${ERROR_MESSAGE}
     Should Be Equal As Strings    ${error_message}    Epic sadface: Username is required
 
     # Nur Benutzername eingeben
@@ -92,6 +92,6 @@ Erfolgreiches Abmelden
     [Documentation]    Öffnet den Browser und ruft die Login-Seite auf.
     New Browser    chromium    headless=False     # Browser öffnen
     Set Browser Timeout    20s                    # Timeout setzen
-    New Context                                   # Neuer Kontext
+    New Context    viewport=None                  # Neuer Kontext
     New Page    ${BASE_URL}                       # Neue Seite mit der gegebenen URL öffnen
     Wait For Elements State    ${USERNAME_INPUT}

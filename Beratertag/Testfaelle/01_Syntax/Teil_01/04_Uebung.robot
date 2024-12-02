@@ -5,8 +5,10 @@
 2. Gebe die Anzahl Zeichen im Wort 'Beratertag 06.12.2024' aus
 3. Prüfe zwei Werte auf Gleichheit (Wort, Zahl etc.)
 
+
 *** Settings ***
-Library    String
+Library     String
+
 
 *** Test Cases ***
 Loesung 1

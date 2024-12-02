@@ -1,3 +1,9 @@
+*** Comments ***
+Kontrollstrukturen sind hilfreich für verschiedene Anwendungsfälle:
+    - Abzweigung in unterschiedliche Automatisierungsabläufe in Abhängigkeit von Bedingungen
+    - Iteration über eine Liste von Werten
+    - Iteration in Abhängigkeit einer Bedingung
+
 *** Test Cases ***
 IF Bedingung
     IF     '${True}' == '${True}'
@@ -18,18 +24,8 @@ FOR Schleife
 
 WHILE Schleife
     VAR    ${value}=    1
-    ${limit}=    Hole aktuelle Sekunde
+    VAR    ${limit}=    100
     WHILE    ${value} < ${limit}
-        ${value}=    Zaehle hoch    ${value}
+        ${value}=    Evaluate    ${value} + 1
     END
     Log To Console    \n${value}
-
-*** Keywords ***
-Hole aktuelle Sekunde
-    ${sec}    Get Time    sec    UTC + 2hours
-    RETURN    ${sec}
-
-Zaehle hoch
-    [Arguments]    ${value}
-    ${new_value}    Evaluate    ${value} + 1
-    RETURN    ${new_value}
