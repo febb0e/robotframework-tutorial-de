@@ -92,6 +92,6 @@ Erfolgreiches Abmelden
     [Documentation]    Öffnet den Browser und ruft die Login-Seite auf.
     New Browser    chromium    headless=False     # Browser öffnen
     Set Browser Timeout    20s                    # Timeout setzen
-    New Context    tracing=true                   # Neuer Kontext
+    New Context                                   # Neuer Kontext
     New Page    ${BASE_URL}                       # Neue Seite mit der gegebenen URL öffnen
     Wait For Elements State    ${USERNAME_INPUT}
