@@ -14,7 +14,6 @@ ${VALUE}    101
 *** Settings ***
 Library    DateTime
 Library    OperatingSystem
-Library    Screenshot
 
 *** Test Cases ***
 Gebe den Binaerwert aus
