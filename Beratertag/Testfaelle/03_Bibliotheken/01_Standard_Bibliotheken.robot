@@ -8,12 +8,15 @@
 
 https://robotframework.org/?tab=libraries#resources
 
+
+*** Settings ***
+Library     DateTime
+Library     OperatingSystem
+
+
 *** Variables ***
 ${VALUE}    101
 
-*** Settings ***
-Library    DateTime
-Library    OperatingSystem
 
 *** Test Cases ***
 Gebe den Binaerwert aus
@@ -27,4 +30,3 @@ Gebe mir die aktuelle Zeit zurueck
 Erstelle eine Hello World Datei
     Create File    path=${CURDIR}/txt/helloworld.txt    content=Hello World!
     File Should Not Be Empty    path=${CURDIR}/txt/helloworld.txt
-

@@ -1,5 +1,5 @@
 *** Settings ***
-Library              Browser  #  enable_presenter_mode=true    show_keyword_call_banner=true
+Library              Browser     #  enable_presenter_mode=true    show_keyword_call_banner=true
 Task Setup           Öffne Website                     # wird vor jedem Testfall ausgeführt
 Task Teardown        Close Browser     ALL             # wird nach jedem Testfall ausgeführt
 
@@ -111,6 +111,6 @@ Logout-Funktion
     [Documentation]    Öffnet den Browser und ruft die Login-Seite auf.
     New Browser    chromium    headless=False     # Browser öffnen
     Set Browser Timeout    10s                    # Timeout setzen
-    New Context      viewport=None                # Neuer Kontext
+    New Context      viewport=None    tracing=True      tracing=${OUTPUT_DIR}/trace.zip          # Neuer Kontext
     New Page    ${URL}                            # Neue Seite mit der gegebenen URL öffnen
 

@@ -1,5 +1,5 @@
 *** Settings ***
-Library           Browser
+Library           Browser    
 
 *** Variables ***
 ${URL}         https://todomvc.com/examples/react/dist/
@@ -10,7 +10,7 @@ ${TASK_2}      Meine zweite Aufgabe
 Hinzufügen von Aufgaben
     [Documentation]   Überprüft, ob eine neue Aufgabe hinzugefügt werden kann.
     New Browser    chromium    headless=False
-    New Context
+    New Context    tracing=true
     New Page    ${URL}
     Set Browser Timeout    10s
 
