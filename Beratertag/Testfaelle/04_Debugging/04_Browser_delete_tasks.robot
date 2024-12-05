@@ -16,6 +16,6 @@ Löschen der Aufgaben
     Type Text    //input[@class="new-todo"]    ${TASK_NAME}
     Press Keys    //input[@class="new-todo"]    ENTER
     Hover    //ul[@class="todo-list"]/li/div
-    Click Element    //ul[@class="todo-list"]/li/div/button[@class="destroy"]
-    Element Should Not Be Visible    //ul[@class="todo-list"]/li
+    Click     //ul[@class="todo-list"]/li/div/button[@class="destroy"]
+    Wait For Elements State    //ul[@class="todo-list"]/li    detached
     Close Browser
