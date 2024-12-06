@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Browser   enable_presenter_mode=True    show_keyword_call_banner=True
+Library    Browser   # enable_presenter_mode=True    show_keyword_call_banner=True
 Test Setup    Öffne Website
 Test Teardown    Close Browser    ALL
 
@@ -15,7 +15,7 @@ ${USERNAME_INPUT}    input[name="user-name"]
 ${PASSWORD_INPUT}    input[name="password"]
 ${LOGIN_BUTTON}      input[name="login-button"]
 ${INVENTORY_LIST}    .inventory_list
-${ERROR_MESSAGE}     .error-message-container
+${ERROR_ELEMENT}     .error-message-container
 ${BURGER_BUTTON}     .bm-burger-button
 ${LOGOUT_LINK}       \#logout_sidebar_link
 ${LOGIN_BOX}         .login-box
@@ -24,7 +24,7 @@ ${LOGIN_BOX}         .login-box
 Login mit gültigen Zugangsdaten
     [Documentation]    Überprüft, ob ein Benutzer sich mit gültigen Zugangsdaten anmelden kann.
     Type Text    ${USERNAME_INPUT}      ${VALID_USERNAME}
-    Type Text    ${PASSWORD_INPUT}         ${VALID_PASSWORD}
+    Type Text    ${PASSWORD_INPUT}      ${VALID_PASSWORD}
     Click        ${LOGIN_BUTTON}
 
     # Überprüfung: Login erfolgreich
@@ -33,19 +33,19 @@ Login mit gültigen Zugangsdaten
 Login mit ungültigen Zugangsdaten
     [Documentation]    Überprüft, ob ein Benutzer sich mit ungültigen Zugangsdaten nicht anmelden kann.
     Type Text    ${USERNAME_INPUT}    ${INVALID_USERNAME}
-    Type Text    ${PASSWORD_INPUT}      ${INVALID_PASSWORD}
+    Type Text    ${PASSWORD_INPUT}    ${INVALID_PASSWORD}
     Click        ${LOGIN_BUTTON}
 
     # Überprüfung: Fehlermeldung sichtbar
-    Wait For Elements State    ${ERROR_MESSAGE}     visible
+    Wait For Elements State    ${ERROR_ELEMENT}     visible
 
 Validierung der Pflichtfelder im Login-Formular
     [Documentation]    Überprüft, ob die Pflichtfelder im Login-Formular korrekt validiert werden.
     Click    ${LOGIN_BUTTON}
 
     # Überprüfung: Fehlermeldung für leere Felder sichtbar
-    Wait For Elements State    ${ERROR_MESSAGE}     visible
-    ${error_message}    Get Text    ${ERROR_MESSAGE}
+    Wait For Elements State    ${ERROR_ELEMENT}     visible
+    ${error_message}    Get Text    ${ERROR_ELEMENT}
     Should Be Equal As Strings    ${error_message}    Epic sadface: Username is required
 
 
@@ -55,8 +55,8 @@ Prüfe die Sichtbarkeit und den Text der Fehlermeldungen
     Click        ${LOGIN_BUTTON}
 
     # Überprüfung: Fehlermeldung sichtbar und Text korrekt
-    Wait For Elements State    ${ERROR_MESSAGE}     visible
-    ${error_message}    Get Text    ${ERROR_MESSAGE}
+    Wait For Elements State    ${ERROR_ELEMENT}     visible
+    ${error_message}    Get Text    ${ERROR_ELEMENT}
     Should Be Equal As Strings    ${error_message}    Epic sadface: Username is required
 
     # Nur Benutzername eingeben
@@ -65,8 +65,8 @@ Prüfe die Sichtbarkeit und den Text der Fehlermeldungen
     Click        ${LOGIN_BUTTON}
 
     # Überprüfung: Fehlermeldung sichtbar und Text korrekt
-    Wait For Elements State    ${ERROR_MESSAGE}     visible
-    ${error_message}    Get Text    ${ERROR_MESSAGE}
+    Wait For Elements State    ${ERROR_ELEMENT}    visible
+    ${error_message}    Get Text   ${ERROR_ELEMENT}
     Should Be Equal As Strings    ${error_message}    Epic sadface: Password is required
 
 
