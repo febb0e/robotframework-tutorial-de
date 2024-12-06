@@ -8,18 +8,26 @@ Kontrollstrukturen sind hilfreich für verschiedene Anwendungsfälle:
 IF Bedingung
     IF     '${True}' == '${True}'
         Log To Console    message=\nIch werde ausgeführt!
+    ELSE
+        Log To Console    message=Nicht True
     END
     IF     '${False}' == '${True}'
         Log To Console    message=Ich werde nicht ausgeführt!
     END
 
-FOR Schleife
+FOR Schleife List
     VAR     @{items}
     ...    Apfel
     ...    Banane
     ...    Orange
     FOR  ${item}  IN  @{items}
             Log To Console    message=${item}
+    END
+
+FOR Schleife Range
+    VAR    ${limit}    10
+    FOR  ${i}  IN RANGE  ${limit}
+        Log To Console    message=${i}
     END
 
 WHILE Schleife
