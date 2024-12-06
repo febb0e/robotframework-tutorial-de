@@ -24,14 +24,17 @@ ${SKALAR}=           Skalarvariablen sind ein einzelnes Objekt
 ...    vorname=Mein Vorname
 ...    nachname=Mein Nachname
 @{LIST}=
-...        Apfel
-...        Banane
-...        Heidelbeere
-...        Orange
+...    Apfel
+...    Banane
+...    Heidelbeere
+...    Orange
 # Vordefinierte RFW-Variablen
-# ${EMPTY}
-# ${True}
-# ${False}
+${EMPTY}
+${True}
+${False}
+
+*** Settings ***
+Library    Collections
 
 *** Test Cases ***
 Gebe die Variablen aus
@@ -51,6 +54,9 @@ Greife auf Liste zu
     VAR    ${erstes_element}    ${LIST[0]}
     Log To Console    \n${erstes_element}
     VAR    ${drittes_element}    ${LIST[2]}
+    Append To List    ${LIST}    Banane
+    VAR    ${LIST}    @{LIST}    Karotte
+    Log To Console    ${LIST}
     Log To Console    ${drittes_element}
     # Zugriff auf identische Variable, da nicht case-sensitiv in RFW
     Log To Console    ${DRITTES_ELEMENT}

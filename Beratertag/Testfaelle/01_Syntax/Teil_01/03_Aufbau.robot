@@ -2,31 +2,30 @@
 Wir zeigen Euch, welche Bereiche es in einer Robotframework Suite gibt.
 
     1. Comments
-        - Allgemeine Kommentare zur Erläuterung der Suite
+    - Allgemeine Kommentare zur Erläuterung der Suite
     2. Settings
-        - Einstellungen der Test-Suite über:
-            - Einbindung von benötigten Bibliotheken
-            - Testaufbau und -abbau Bedingungen
-            - Timeouts und andere Konfigurationen
+    - Einstellungen der Test-Suite über:
+    - Einbindung von benötigten Bibliotheken
+    - Testaufbau und -abbau Bedingungen
+    - Timeouts und andere Konfigurationen
     3. Variables
-        - Auflistung von suite-relevanten Variablen
+    - Auflistung von suite-relevanten Variablen
     4. Test-Cases
-        - Automatisierte Testfälle
-        - Freiwählbare Namen
+    - Automatisierte Testfälle
+    - Freiwählbare Namen
     5. Keywords
-        - wiederverwendbare Funktionen
-        - Freiwählbare Namen
+    - wiederverwendbare Funktionen
+    - Freiwählbare Namen
 
 
 *** Settings ***
 Documentation       Hier kann dokumentiert werden
-
 Library             String
 # Resource    /pfad/zu/meiner/library.py
 
 
 *** Variables ***
-${MY_MESSAGE}=       Liebe Gruesse vom Keyword :p
+${MY_MESSAGE}=      Liebe Gruesse vom Keyword :p
 
 
 *** Test Cases ***
@@ -50,3 +49,4 @@ Gruesse von einem Keyword
     # Library Keyword
     ${MessageLength}    Get Length    item=${MyArgument}
     Log To Console    MyArgument ist ${MessageLength} Zeichen lang!
+

@@ -8,15 +8,17 @@
 3. Sorge dafür, dass der Testfall wie vorab funktioniert
 
 *** Variables ***
-${input_1}    42
-${input_2}    4711
-${input_3}    Hello World!
+
 
 *** Settings ***
 Library    String
 
 *** Test Cases ***
 Extrahiere Keywords von mir
+    VAR    ${input_1}    42
+    VAR    ${input_2}    4711
+    VAR    ${input_3}    Hello World!
+    
     VAR    ${ergebnis}
     VAR    ${string}
     VAR    ${hex}

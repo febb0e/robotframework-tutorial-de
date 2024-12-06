@@ -16,9 +16,10 @@ Test Template    Multipliziere zwei Zahlen
 Pruefe Multiplikation
 ...    argument_1
 ...    argument_2
+...    erwartungswert
 
 *** Keywords ***
 Multipliziere zwei Zahlen
-    [Arguments]    ${argument_1}    ${argument_2}
+    [Arguments]    ${argument_1}    ${argument_2}    ${erwartungswert}
     ${ergebnis}    Evaluate    ${argument_1} * ${argument_2}
-    Log To Console    ${ergebnis}
+    Should Be Equal As Strings    ${ergebnis}    ${erwartungswert}

@@ -21,7 +21,7 @@
     "robotcode.debug.groupOutput": false,
     "robotcode.robocop.enabled": false,
     "redhat.telemetry.enabled": false,
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Material Theme",
     "gitpod.openInStable.neverPrompt": true,
     "git.autofetch": true,
     "github.gitProtocol": "ssh",
@@ -37,7 +37,7 @@
         "README.md": true,
         "**/crypto_keys": true
     },
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.colorCustomizations": {
         // "[Default Dark+]": {
         //     "editor.background": "#0d0f14",

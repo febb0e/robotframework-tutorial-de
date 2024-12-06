@@ -1,5 +1,5 @@
 *** Settings ***
-Library              Browser     #  enable_presenter_mode=true    show_keyword_call_banner=true
+Library              Browser     enable_presenter_mode=true    show_keyword_call_banner=true
 Task Setup           Öffne Website                     # wird vor jedem Testfall ausgeführt
 Task Teardown        Close Browser     ALL             # wird nach jedem Testfall ausgeführt
 
