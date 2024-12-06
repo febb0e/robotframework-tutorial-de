@@ -1,3 +1,6 @@
+*** Comments ***
+Eigene Bibliotheken können eingebunden werden, indem man den Pfad zur Python Datei angibt
+
 *** Settings ***
 Library    library/mylib.py
 

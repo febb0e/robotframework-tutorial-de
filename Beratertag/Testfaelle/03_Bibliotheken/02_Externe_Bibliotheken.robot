@@ -5,6 +5,9 @@ Importieren und Nutzen von Externen Bibliotheken
 
 https://robotframework.org/?tab=libraries#resources
 
+Externe Bibliotheken müssen explizit installiert werden:
+    Bspw. über 'pip install robotframework'
+
 *** Settings ***
 Library    DataDriver    file=${CURDIR}/xlsx/testcases.xlsx    sheet_name=Multiplikation
 Test Template    Multipliziere zwei Zahlen

@@ -8,6 +8,9 @@
 
 https://robotframework.org/?tab=libraries#resources
 
+Standard-Bibliotheken / Built-In Libraries sind in Robotframework eingebunden
+...    und müssen nicht separat installiert werden
+
 
 *** Settings ***
 Library     DateTime
